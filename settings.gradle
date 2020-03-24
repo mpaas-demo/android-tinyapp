@@ -1,0 +1,2 @@
+include ':miniapp-build'
+project(':miniapp-build').projectDir = new File('app')

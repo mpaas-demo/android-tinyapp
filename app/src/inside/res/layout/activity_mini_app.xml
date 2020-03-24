@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.alipay.mobile.antui.basic.AUTitleBar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/btn_open_mini_app"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:layout_margin="12dp"
+        android:clickable="true"
+        android:text="@string/open_mini_app" />
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/btn_open_preview_debug"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:layout_margin="12dp"
+        android:clickable="true"
+        android:text="@string/open_mini_preview" />
+
+    <com.alipay.mobile.antui.basic.AUAssistLabelView
+        android:id="@+id/tv_tips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp" />
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/btn_open_permission"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:layout_height="52dp"
+        android:clickable="true"
+        android:text="@string/permission" />
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/btn_custom_start_loading"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:layout_height="52dp"
+        android:clickable="true"
+        android:text="@string/custom_loading" />
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/btn_custom_title"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:layout_height="52dp"
+        android:clickable="true"
+        android:text="@string/custom_title" />
+</LinearLayout>

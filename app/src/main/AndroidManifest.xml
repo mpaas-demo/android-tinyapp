@@ -1,0 +1,160 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mpaas.demo">
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <!-- 使用特性声明，包含不需要的和一定需要的 -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="com.yunos.permission.TYID_MGR_SERVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="com.taobao.permission.UPDATE_CREDENTIALS" />
+    <uses-permission android:name="com.yunos.permission.STORAGE_SERVICE" />
+    <uses-permission android:name="com.sonyericsson.home.permission.BROADCAST_BADGE" />
+    <uses-permission android:name="com.android.launcher.permission.UNINSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.yunos.permission.TYID_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.htc.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.majeur.launcher.permission.UPDATE_BADGE" />
+    <uses-permission android:name="com.aliyun.permission.TYID_SERVICE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="com.aliyun.permission.STORAGE_SERVICE" />
+    <!-- 指纹支付业务 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+
+    <application
+        android:name="com.mpaas.demo.nebula.LauncherApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:theme="@style/AppThemeNew"
+        tools:ignore="GoogleAppIndexingWarning">
+
+        <!--mpaasapi-->
+        <meta-data
+            android:name="mpaasapi"
+            android:value="https://cn-hangzhou-component-gw.cloud.alipay.com/mgw.htm" />
+
+        <!--rpc网关-->
+        <meta-data
+            android:name="mobilegw.url"
+            android:value="https://cn-hangzhou-mgs-gw.cloud.alipay.com/mgw.htm" />
+
+        <!--无限保镖appkey,用于加密-->
+        <meta-data
+            android:name="appkey"
+            android:value="570DA89281533_ANDROID" />
+
+        <!--无限保镖AppSecret,用于加密-->
+        <meta-data
+            android:name="AppSecret"
+            android:value="" />
+
+        <!--日志上传网关-->
+        <meta-data
+            android:name="logging.gateway"
+            android:value="https://cn-hangzhou-mas-log.cloud.alipay.com" />
+
+        <!--日志的加密公钥-->
+        <meta-data
+            android:name="setting.logging.encryption.pubkey"
+            android:value="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCpffOiYcozIfgIiaOPWsmfktv7Sl/9Af3mIgYz7vkTXoGq4iMN+t5BLV6KjddVEI/9oLtAYV8qx7FhFrUoi3smcYfX35ETPUiHi1gLizeXKVSRYhIm2kiDF5lGfDgcS7uJZvmKjbdYy/RphnH+WQvQyeEH+4rjYSkdhIRE2W52BwIDAQAB" />
+
+        <!--监控（电量、流量、闪退、性能、业务、埋点等等）分配的id-->
+        <meta-data
+            android:name="workspaceId"
+            android:value="default" />
+
+
+        <!-- 设置appid，服务端会把这个值当成服务端appkey，做验签。如果不配置，则取appkey作为appid -->
+        <meta-data
+            android:name="mobilegw.appid"
+            android:value="570DA89281533" />
+
+        <!-- 推荐配置：如果配置为V2，将会支持protobuff等高级特性。目前为了兼容一些老网关，默认为V1。-->
+        <meta-data
+            android:name="mobilegw.rpcVersion"
+            android:value="V2" />
+
+        <!--定位相关内容-->
+        <!--高德定位key-->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="a6ca73bb050c27c52c6080764690db05" />
+        <!--高德定位Service-->
+        <service android:name="com.amap.api.location.APSService" />
+        <!--定位相关内容结束-->
+
+        <!--UC开发者Key-->
+        <meta-data
+            android:name="UCSDKAppKey"
+            android:value="JJQ/FLbHKX+ETiFNpCcb0fqjPfQ+JnjGBxDaqUm0MDcNATUVfsVrSh4KHq8of4/pFud/TDgjKf8891LpDlGG4w==" />
+
+        <!--全面屏适配相关-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <meta-data android:name="nebula.android.meta.enable" android:value="true"/>
+
+
+        <activity android:name="com.mpaas.demo.nebula.LauncherActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.mpaas.demo.nebula.MiniAppActivity">
+
+        </activity>
+        <activity android:name=".nebula.PermissionDisplayActivity" />
+    </application>
+</manifest>
+

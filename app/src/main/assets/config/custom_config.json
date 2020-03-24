@@ -1,0 +1,18 @@
+[
+  {
+    "key": "h5_remote_debug_host",
+    "value": "wss://cn-hangzhou-mproxy.cloud.alipay.com/host/"
+  },
+  {
+    "value": "YES",
+    "key": "mp_ta_showOptionMenu"
+  },
+  {
+    "value": "YES",
+    "key": "mp_ta_showShareMenuItem"
+  },
+  {
+    "value": "NO",
+    "key": "mp_ta_use_orginal_mini_nagivationbar"
+  }
+]

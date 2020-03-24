@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/mini_app"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:gravity="center"
+        android:layout_margin="12dp"
+        android:layout_height="52dp"
+        android:text="@string/mini_app"/>
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/api_test"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:gravity="center"
+        android:layout_margin="12dp"
+        android:layout_height="52dp"
+        android:text="@string/api_test"/>
+
+    <com.alipay.mobile.antui.basic.AUButton
+        android:id="@+id/auth_test"
+        style="@com.alipay.mobile.antui:style/mainButtonStyle"
+        android:gravity="center"
+        android:layout_margin="12dp"
+        android:layout_height="52dp"
+        android:text="@string/auth_test" />
+</LinearLayout>

@@ -1,8 +1,10 @@
-apply plugin: 'com.android.application'
 if (mPaasBuildType != 'aar') {
     apply plugin: 'com.alipay.portal'
+    apply plugin: 'com.alipay.apollo.baseline.update'
+
+} else {
+    apply plugin: 'com.android.application'
 }
-apply plugin: 'com.alipay.apollo.baseline.update'
 
 android {
     compileSdkVersion 26
@@ -87,13 +89,13 @@ dependencies {
     if (mPaasBuildType == 'aar') {
         implementation 'com.mpaas.android:antui'
         implementation 'com.mpaas.android:scan'
-        implementation 'com.mpaas.android:tinyapp-video'
         implementation 'com.mpaas.android:tinyapp-media'
         implementation 'com.mpaas.android:tinyapp-map'
         implementation 'com.mpaas.android:uccore'
         implementation 'com.mpaas.android:tinyapp'
+        implementation 'com.mpaas.android:inside'
 
-        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-13')
+        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-3')
     }
 
 }

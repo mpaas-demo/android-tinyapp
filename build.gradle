@@ -17,12 +17,11 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.boost.easyconfig:easyconfig:2.3.3'
         if (mPaasBuildType == 'aar') {
             classpath 'com.android.tools.build:gradle:3.5.0'
         } else {
-            classpath 'com.android.tools.build:gradle:3.0.1'
-            classpath 'com.alipay.android:android-gradle-plugin:3.0.0.7.25'
+            classpath 'com.android.boost.easyconfig:easyconfig:2.3.8'
+            classpath 'com.alipay.android:android-gradle-plugin:3.5.4'
         }
 
     }

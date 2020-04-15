@@ -11,8 +11,6 @@
 
 ### Inside编译
 1. gradle.properties里mPaasBuildType设置为inside
-2. gradle-wrapper.properties里distributionUrl=https\://services.gradle.org/distributions/gradle-4.4-all.zip
 
 ### AAR编译
 1. gradle.properties里mPaasBuildType设置为aar
-2. gradle-wrapper.properties里distributionUrl=https\://services.gradle.org/distributions/gradle-5.5-all.zip

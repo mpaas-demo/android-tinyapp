@@ -14,3 +14,5 @@
 
 ### AAR编译
 1. gradle.properties里mPaasBuildType设置为aar
+
+使用命令行编译, ./gradlew clean installDebug

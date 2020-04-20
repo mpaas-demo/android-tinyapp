@@ -4,6 +4,7 @@ if (mPaasBuildType != 'aar') {
 
 } else {
     apply plugin: 'com.android.application'
+    apply plugin: 'com.alipay.apollo.baseline.config'
 }
 
 android {

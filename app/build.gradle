@@ -1,7 +1,6 @@
 if (mPaasBuildType != 'aar') {
     apply plugin: 'com.alipay.portal'
     apply plugin: 'com.alipay.apollo.baseline.update'
-
 } else {
     apply plugin: 'com.android.application'
     apply plugin: 'com.alipay.apollo.baseline.config'
@@ -49,7 +48,6 @@ android {
     }
     buildTypes {
         debug {
-            v2SigningEnabled false
             signingConfig signingConfigs.debug
         }
         release {
@@ -99,7 +97,7 @@ dependencies {
         implementation 'com.mpaas.android:tinyapp'
         implementation 'com.mpaas.android:inside'
 
-        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-3')
+        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-5')
     }
 
 }

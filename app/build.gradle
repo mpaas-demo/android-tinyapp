@@ -97,7 +97,7 @@ dependencies {
         implementation 'com.mpaas.android:tinyapp'
         implementation 'com.mpaas.android:inside'
 
-        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-5')
+        implementation platform('com.mpaas.android:mpaas-baseline:10.1.68-6')
     }
 
 }

@@ -8,3 +8,6 @@
 ## 编译
 
 您可以直接使用命令行编译, ./gradlew clean installDebug，即可运行在手机上
+
+如果您需要使用 inside 接入方式，可参考该 TAG
+https://github.com/mpaas-demo/android-tinyapp/tree/10.1.68_aar_and_inside

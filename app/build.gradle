@@ -51,7 +51,6 @@ dependencies {
     implementation platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
     // 小程序
     implementation 'com.mpaas.android:tinyapp'
-    implementation 'com.mpaas.android:rpc'
     // 账户通
     implementation 'com.mpaas.android:inside'
 }

@@ -1,4 +1,4 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -45,7 +45,7 @@ public class TinyNavigationBar extends AbsTitleView {
             parent = (ViewGroup) ((Activity) context).findViewById(android.R.id.content);
         }
         content = (H5TitleBarFrameLayout) LayoutInflater.from(context).inflate(R.layout.h5_new_title_layout, parent, false);
-        content.getContentBgView().setColor(context.getResources().getColor(R.color.h5_default_titlebar_color));
+        content.getContentBgView().setColor(context.getResources().getColor(R.color.colorPrimary));
         mainTitleView = (TextView) content.findViewById(R.id.mainTitle);
         subTitleView = (TextView) content.findViewById(R.id.subTitle);
         btnBack = content.findViewById(R.id.back);
@@ -127,7 +127,7 @@ public class TinyNavigationBar extends AbsTitleView {
 
     @Override
     public void resetTitle() {
-        content.getContentBgView().setColor(context.getResources().getColor(R.color.h5_default_titlebar_color));
+        content.getContentBgView().setColor(context.getResources().getColor(R.color.colorPrimary));
     }
 
     @Override

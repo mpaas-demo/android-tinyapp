@@ -1,4 +1,4 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
 import android.os.Bundle;
 import android.view.View;
@@ -8,6 +8,7 @@ import android.widget.CompoundButton;
 import com.alipay.mobile.antui.basic.AUSearchBar;
 import com.alipay.mobile.antui.tablelist.AUSwitchListItem;
 import com.alipay.mobile.framework.app.ui.BaseFragmentActivity;
+import com.alipay.mobile.nebula.provider.TinyAppPermissionExternProvider;
 import com.alipay.mobile.nebula.util.H5Utils;
 import com.mpaas.demo.R;
 import com.mpaas.nebula.adapter.api.MPTinyHelper;
@@ -26,6 +27,10 @@ public class PermissionDisplayActivity extends BaseFragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_permission);
+
+        // 设置小程序自定义权限管控
+        H5Utils.setProvider(TinyAppPermissionExternProvider.class.getName(), new TinyExternalPermissionCheckProvider());
+
         mScrollView = (ViewGroup) findViewById(R.id.scrollview);
         mSearchInputBox = (AUSearchBar) findViewById(R.id.search);
         mSearchInputBox.getSearchEditView().setHint("输入APPID");

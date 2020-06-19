@@ -5,14 +5,14 @@
   },
   {
     "value": "YES",
-    "key": "mp_ta_showOptionMenu"
-  },
-  {
-    "value": "YES",
     "key": "mp_ta_showShareMenuItem"
   },
   {
     "value": "NO",
     "key": "mp_ta_use_orginal_mini_nagivationbar"
+  },
+  {
+    "value": "YES",
+    "key": "h5_shouldverifyapp"
   }
 ]

@@ -1,51 +1,47 @@
-apply plugin: 'maven'
+apply plugin: 'com.alipay.apollo.optimize'// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext.mpaas_artifact = "mpaas-baseline"
+    ext.mpaas_baseline = "10.1.68-7"
+
     repositories {
-        mavenLocal()
-        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        google()
+        jcenter()
         maven {
+            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            name 'alipay'
             credentials {
-                username "mvn_read_ws"
-                password "mrk8929"
+                username 'mvn_read_ws'
+                password 'mrk8929'
             }
-            url "http://mvn.cloud.alipay.com/nexus/content/repositories/releases/"
         }
-        maven {
-            url 'http://maven.aliyun.com/nexus/content/repositories/google/'
-            name 'aliyun-google'
-        }
+
     }
     dependencies {
-        classpath 'com.android.boost.easyconfig:easyconfig:2.3.8'
+        classpath 'com.android.tools.build:gradle:3.6.2'
+        classpath 'com.android.boost.easyconfig:easyconfig:2.4.1'
 
-        if (mPaasBuildType == 'aar') {
-            classpath 'com.android.tools.build:gradle:3.5.0'
-        } else {
-            classpath 'com.alipay.android:android-gradle-plugin:3.5.4'
-        }
 
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
     }
 }
+
 allprojects {
     repositories {
-        flatDir {
-            dirs 'libs'
-        }
-        mavenLocal()
         maven {
+            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            name 'alipay'
             credentials {
-                username "mvn_read_ws"
-                password "mrk8929"
+                username 'mvn_read_ws'
+                password 'mrk8929'
             }
-            url "http://mvn.cloud.alipay.com/nexus/content/repositories/releases/"
         }
-        maven{ url 'http://maven.aliyun.com/nexus/content/groups/public/'}
-        maven {
-            url 'http://maven.aliyun.com/nexus/content/repositories/google/'
-            name 'aliyun-google'
-        }
-
+        google()
+        jcenter()
     }
 }
-    
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

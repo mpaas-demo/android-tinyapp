@@ -1,4 +1,4 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -85,5 +85,10 @@ public class TinyOptionMenuView extends AbsTinyOptionMenuView {
         if (getTitleBar().getBackgroundColor() == -1) {
             bgView.setBackgroundColor(Color.RED);
         }
+    }
+
+    @Override
+    public void hideOptionMenu() {
+
     }
 }

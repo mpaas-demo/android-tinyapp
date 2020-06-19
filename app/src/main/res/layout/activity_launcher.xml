@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/mini_app"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/mini_app" />
+
+    <Button
+        android:id="@+id/preview_debug"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/advance_preview_debug" />
+    <Button
+        android:id="@+id/option_menu"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/advance_option_menu" />
+    <Button
+        android:id="@+id/custom_title"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/advance_custom_title" />
+    <Button
+        android:id="@+id/startup_loading"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/advance_startup_loading" />
+    <Button
+        android:id="@+id/custom_api"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/advance_custom_api" />
+    <Button
+        android:id="@+id/api_permission"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/advance_api_permission" />
+    <Button
+        android:id="@+id/tinyapp_share"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/tinyapp_share" />
+    <Button
+        android:id="@+id/open_auth"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:text="@string/open_auth" />
+
+</LinearLayout>

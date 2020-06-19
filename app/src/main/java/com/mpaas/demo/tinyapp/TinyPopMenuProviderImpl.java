@@ -1,4 +1,4 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
 import android.content.Context;
 import android.os.Bundle;

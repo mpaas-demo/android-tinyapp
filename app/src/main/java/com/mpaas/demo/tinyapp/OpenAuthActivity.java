@@ -1,22 +1,21 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
-import android.app.Application;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.mobile.common.logging.api.LoggerFactory;
-import com.alipay.mobile.framework.quinoxless.IInitCallback;
-import com.alipay.mobile.framework.quinoxless.QuinoxlessFramework;
-import com.alipay.mobile.nebula.provider.H5AppCenterPresetProvider;
-import com.alipay.mobile.nebula.provider.TinyAppPermissionExternProvider;
-import com.alipay.mobile.nebula.provider.TinyPopMenuProvider;
-import com.alipay.mobile.nebula.util.H5Utils;
+import com.mpaas.demo.R;
 import com.mpaas.mas.adapter.api.MPLogger;
 import com.mpaas.nebula.adapter.alipay.AuthConfig;
 import com.mpaas.nebula.adapter.alipay.AuthGlobal;
 import com.mpaas.nebula.adapter.alipay.AuthInfo;
 import com.mpaas.nebula.adapter.alipay.AuthProvider;
-import com.mpaas.nebula.adapter.api.MPNebula;
 
 import java.io.ByteArrayOutputStream;
 import java.io.Closeable;
@@ -25,7 +24,7 @@ import java.io.InputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class LauncherApplication extends Application {
+public class OpenAuthActivity extends AppCompatActivity {
 
     private static final String TAG = "LauncherApplication";
 
@@ -34,30 +33,20 @@ public class LauncherApplication extends Application {
     private String accessToken;
 
     @Override
-    public void onCreate() {
-        super.onCreate();
-        QuinoxlessFramework.setup(this, new IInitCallback() {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        setTitle(R.string.open_auth);
+        ((TextView) findViewById(R.id.button)).setText(R.string.init_open_auth);
+        findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onPostInit() {
-                H5Utils.setProvider(H5AppCenterPresetProvider.class.getName(), new H5AppCenterPresetProviderImpl());
-                MPLogger.setUserId("mPaaSTest");
-                MPNebula.registerH5Plugin(ShareTinyMsgPlugin.class.getName(), "", "page", new String[] {
-                        ShareTinyMsgPlugin.ACTION_SHARE
-                });
-                H5Utils.setProvider(TinyPopMenuProvider.class.getName(), new TinyPopMenuProviderImpl());
-                H5Utils.setProvider(TinyAppPermissionExternProvider.class.getName(), new TinyExternalPermissionCheckProvider());
-                MPNebula.enableAppVerification("MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEArrbiSmhH+oru/dzwyftJ" +
-                        "OXvXkSSYQ/f2K7kOMP6HN9cxvKQu/50LzjrpfusDQFZr2zMWayUPqSMftrpwfKGg" +
-                        "mxD6G8ldDzufjfAR7jI+AVlG3O6L9/pWjGYSjF7/IrPNzfSjG8zRRxoCeOOj0Y3n" +
-                        "tCEZ0h/+ndYN/BY3Ej4VySnTOHRJJyVgGMblN7Q4mBztN1RnoDldkx7nETrBX23S" +
-                        "I0Kp2GpggvmYcPx1Un2nF9UNvZDHIG/TnOg1GL4KP006kShqYD+2NPOJXPPhaDbf" +
-                        "F9grlxl8xRBGQ5/SQcs1r5gtpJp8NpiWxPcMjd8uA+SOsa0DmLMzuo4oMH3MOktI" +
-                        "tQIDAQAB");
+            public void onClick(View v) {
                 initOpenAuth();
+                Toast.makeText(OpenAuthActivity.this, "初始化成功", Toast.LENGTH_SHORT).show();
             }
         });
-        QuinoxlessFramework.init();
     }
+
 
     private void initOpenAuth() {
         AuthGlobal.getInstance().setAuthProvider(new AuthProvider() {

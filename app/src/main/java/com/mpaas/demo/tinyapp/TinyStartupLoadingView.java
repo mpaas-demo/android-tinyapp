@@ -1,24 +1,23 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
 import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.TextView;
 
-import com.alipay.mobile.antui.basic.AUProgressBar;
-import com.alipay.mobile.antui.basic.AUTextView;
 import com.alipay.mobile.antui.basic.AUTitleBar;
 import com.mpaas.demo.R;
 import com.mpaas.nebula.adapter.api.MPTinyBaseIntermediateLoadingView;
 
 public class TinyStartupLoadingView extends MPTinyBaseIntermediateLoadingView {
 
-    private AUTextView tvAppName;
+    private TextView tvAppName;
 
     private View progressBar;
 
-    private AUTextView tvTips;
+    private TextView tvTips;
 
     public TinyStartupLoadingView(Context context) {
         super(context);
@@ -37,9 +36,9 @@ public class TinyStartupLoadingView extends MPTinyBaseIntermediateLoadingView {
 
     private void init() {
         LayoutInflater.from(getContext()).inflate(R.layout.activity_loading, this, true);
-        tvAppName = (AUTextView) findViewById(R.id.tv_app);
+        tvAppName = (TextView) findViewById(R.id.tv_app);
         progressBar =  findViewById(R.id.progress);
-        tvTips = (AUTextView) findViewById(R.id.tv_tips);
+        tvTips = (TextView) findViewById(R.id.tv_tips);
         ((AUTitleBar)findViewById(R.id.title)).getBackButton().setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -1,4 +1,4 @@
-package com.mpaas.demo.nebula;
+package com.mpaas.demo.tinyapp;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alipay.mobile.antui.dialog.AUNoticeDialog;
@@ -27,7 +27,9 @@ public class ShareTinyMsgPlugin extends H5SimplePlugin {
             String myprop = param.getString("myprop");
             String path = param.getString("page");
             String appId = event.getH5page().getParams().getString("appId");
-            // 此处可调用分享组件，实现后续功能
+
+            // TODO 在此处可调用分享组件，实现后续功能
+
             String message = "应用ID： " + appId + "\n"
                     + "title: " + title + "\n"
                     + "desc: " + desc + "\n"
